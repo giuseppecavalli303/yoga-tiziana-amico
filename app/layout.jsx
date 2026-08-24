@@ -15,11 +15,13 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Tiziana Amico — Yoga | Riconnetti mente e corpo",
+  title: "Tiziana Amico — Yoga online su Zoom | Riconnetti mente e corpo",
   description:
-    "Yoga come stile di vita: respiro, flessibilità ed equilibrio mentale. Classi a numero chiuso, guida costante e rispetto della biomeccanica. Prima lezione gratuita.",
+    "Yoga online in diretta su Zoom, come stile di vita: respiro, flessibilità ed equilibrio mentale. Classi a numero chiuso, correzione posturale in tempo reale e rispetto della biomeccanica. Prima lezione gratuita.",
   keywords: [
     "yoga",
+    "yoga online",
+    "lezioni di yoga su Zoom",
     "insegnante di yoga",
     "Tiziana Amico",
     "respiro",
@@ -27,9 +29,9 @@ export const metadata = {
     "classi a numero chiuso",
   ],
   openGraph: {
-    title: "Tiziana Amico — Yoga",
+    title: "Tiziana Amico — Yoga online su Zoom",
     description:
-      "Un percorso di yoga per riconnettere mente e corpo. Prima lezione gratuita.",
+      "Un percorso di yoga in diretta su Zoom per riconnettere mente e corpo. Prima lezione gratuita.",
     type: "website",
     locale: "it_IT",
   },

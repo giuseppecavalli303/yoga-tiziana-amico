@@ -12,7 +12,7 @@ export default function Hero() {
 
       <div className="section relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
         <div className="animate-rise">
-          <p className="eyebrow">Yoga · Presenza · Stile di vita</p>
+          <p className="eyebrow">Yoga online in diretta · Stile di vita</p>
 
           <h1 className="mt-6 font-serif text-[2.7rem] font-light leading-[1.08] text-sage-900 sm:text-6xl lg:text-[4.1rem]">
             Riporta la mente
@@ -22,8 +22,9 @@ export default function Hero() {
 
           <p className="mt-8 max-w-prose text-lg leading-relaxed text-sage-700">
             Lo yoga non è un&apos;ora sul tappetino: è un modo di stare al
-            mondo. Insieme costruiamo una pratica che ti accompagna anche fuori
-            dalla sala — nel respiro più lungo, nella postura più aperta, nella
+            mondo. Ci troviamo dal vivo su Zoom, in un gruppo piccolo, e
+            costruiamo insieme una pratica che ti accompagna anche lontano dal
+            tappetino — nel respiro più lungo, nella postura più aperta, nella
             calma che resta quando la giornata si fa densa.
           </p>
 
@@ -37,11 +38,29 @@ export default function Hero() {
             </a>
           </div>
 
+          <p className="mt-5 flex items-center gap-2.5 text-sm text-sage-600">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+              className="h-5 w-5 shrink-0"
+            >
+              <rect x="2.5" y="6" width="13" height="12" rx="2.5" />
+              <path d="m15.5 11 6-3.5v9l-6-3.5" />
+            </svg>
+            Lezioni dal vivo su Zoom: il link ti arriva via email, pratichi da
+            casa tua.
+          </p>
+
           <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-sage-200 pt-8">
             {[
               { k: "Max 8", v: "persone per classe" },
+              { k: "In diretta", v: "mai lezioni registrate" },
               { k: "Ogni livello", v: "dal primo respiro" },
-              { k: "In presenza", v: "guida costante" },
             ].map((item) => (
               <div key={item.k}>
                 <dt className="font-serif text-2xl text-sage-800">{item.k}</dt>

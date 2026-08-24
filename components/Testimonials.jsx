@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "Il gruppo piccolo cambia tutto. Tiziana si accorge di come sto quel giorno prima ancora che lo dica io, e la lezione si adatta di conseguenza. Non mi era mai successo in una palestra.",
+      "Temevo che online significasse essere lasciato a me stesso davanti a un video. Invece Tiziana mi chiama per nome, corregge, propone la variante: mi era successo di sentirmi meno seguito in una palestra vera.",
     name: "Davide R.",
     detail: "Pratica da 8 mesi",
     initials: "DR",
@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     quote:
-      "La parte che non mi aspettavo sono i minuti di silenzio finali. Escono da lì con una lucidità che dura tutta la settimana: è diventata la cosa che proteggo di più nella mia agenda.",
+      "La parte che non mi aspettavo sono i minuti di silenzio finali. Chiudo il computer con una lucidità che dura tutta la settimana: è diventata la cosa che proteggo di più nella mia agenda.",
     name: "Marco B.",
     detail: "Pratica da 2 anni",
     initials: "MB",
@@ -67,7 +67,7 @@ export default function Testimonials() {
     >
       <div className="section">
         <div className="max-w-3xl">
-          <p className="eyebrow">Le voci della sala</p>
+          <p className="eyebrow">Le voci del gruppo</p>
           <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-sage-900 sm:text-5xl">
             Chi pratica racconta
             <span className="block italic text-sage-600">
@@ -76,7 +76,8 @@ export default function Testimonials() {
           </h2>
           <p className="mt-7 leading-relaxed text-sage-700">
             Le trasformazioni più profonde raramente si vedono in una fotografia.
-            Ecco cosa dicono gli allievi dopo qualche mese di pratica costante.
+            Ecco cosa dicono gli allievi dopo qualche mese di pratica costante,
+            un collegamento dopo l'altro.
           </p>
         </div>
 
@@ -125,8 +126,8 @@ export default function Testimonials() {
               </span>
             </p>
             <p className="mt-4 text-sm leading-relaxed text-sage-100/80">
-              La prima lezione è gratuita: vieni a vedere com&apos;è respirare
-              in un gruppo piccolo.
+              La prima lezione è gratuita: collegati e senti com&apos;è respirare
+              insieme, anche a distanza.
             </p>
             <a
               href="#inizia-ora"

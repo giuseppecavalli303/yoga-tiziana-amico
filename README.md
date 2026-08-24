@@ -2,10 +2,14 @@
 
 Landing page one-page costruita con **Next.js 14 (App Router)**, **React 18** e **TailwindCSS 3**.
 
-Direttiva editoriale: lo **Yoga** è il centro della pagina — disciplina olistica, stile di vita,
-benessere fisico e mentale. La **ginnastica posturale** compare solo come garanzia di attenzione
-alla biomeccanica e alla sicurezza. Nessun riferimento a dolori o patologie: il registro è quello
-della **crescita personale**.
+Direttiva editoriale: la pagina presenta **un solo servizio**, lo **Yoga online in diretta su
+Zoom** — disciplina olistica, stile di vita, benessere fisico e mentale. La **ginnastica
+posturale in presenza** (due incontri a settimana) è un servizio reale ma volutamente defilato:
+compare come accenno nel footer e, dentro il Metodo, solo come garanzia di attenzione alla
+biomeccanica. Nessun riferimento a dolori o patologie: il registro è quello della **crescita
+personale**.
+
+La **prima lezione gratuita** si riferisce alla lezione di yoga su Zoom.
 
 ---
 
@@ -69,11 +73,11 @@ yoga/
 
 | # | Sezione | Ancora | Contenuto |
 |---|---------|--------|-----------|
-| 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
+| 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, nota «lezioni dal vivo su Zoom», CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
-| 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** · **Correzione posturale in tempo reale** · **Rispetto della biomeccanica** |
+| 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica** |
 | 4 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
-| 5 | Inizia Ora | `#inizia-ora` | Prenotazione diretta via iframe Calendly + i tre passi del primo incontro |
+| 5 | Inizia Ora | `#inizia-ora` | Prenotazione via iframe Calendly + i tre passi (scegli l'orario → ricevi il link Zoom → pratichi) |
 
 ---
 

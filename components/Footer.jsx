@@ -12,8 +12,19 @@ export default function Footer() {
             <p className="font-serif text-3xl text-sage-900">Tiziana Amico</p>
             <p className="eyebrow mt-2">Insegnante di Yoga</p>
             <p className="mt-6 max-w-md leading-relaxed text-sage-700">
-              Pratica olistica, gruppi piccoli, attenzione alla biomeccanica.
-              Per chi vuole coltivare benessere fisico e mentale nel tempo.
+              Yoga online in diretta su Zoom: pratica olistica, gruppi piccoli,
+              attenzione alla biomeccanica. Per chi vuole coltivare benessere
+              fisico e mentale nel tempo.
+            </p>
+
+            {/* Accenno al secondo servizio, volutamente defilato:
+                la pagina resta dedicata allo yoga online. */}
+            <p className="mt-5 max-w-md rounded-2xl border border-sage-200 bg-sand-100/70 p-5 text-sm leading-relaxed text-sage-700">
+              <span className="font-medium text-sage-900">
+                Anche ginnastica posturale, in presenza.
+              </span>{" "}
+              Due incontri a settimana in piccolo gruppo, dedicati al lavoro
+              posturale. Scrivimi per conoscere sede e orari.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:gap-6">

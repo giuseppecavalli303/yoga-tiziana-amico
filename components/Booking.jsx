@@ -16,15 +16,15 @@ const CALENDLY_URL =
 const steps = [
   {
     title: "Scegli il momento",
-    body: "Un orario che ti lascia arrivare senza correre.",
+    body: "Un orario in cui puoi collegarti senza fretta.",
   },
   {
-    title: "Ci sentiamo prima",
-    body: "Due parole sul tuo percorso e sulle tue aspettative.",
+    title: "Ricevi il link Zoom",
+    body: "Arriva via email subito dopo la prenotazione.",
   },
   {
     title: "Pratichi con noi",
-    body: "La prima lezione è gratuita e senza alcun impegno.",
+    body: "Da casa tua, in diretta. Gratis e senza impegno.",
   },
 ];
 
@@ -48,8 +48,9 @@ export default function Booking() {
             </h2>
             <p className="mt-7 max-w-prose leading-relaxed text-sage-100/85">
               Scegli direttamente dal calendario il giorno della tua prima
-              lezione. Nessun modulo da compilare, nessuna attesa: ricevi la
-              conferma via email in pochi secondi.
+              lezione di yoga online. Nessun modulo da compilare, nessuna
+              attesa: la conferma con il link Zoom arriva via email in pochi
+              secondi.
             </p>
 
             <ol className="mt-10 space-y-6">

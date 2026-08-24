@@ -40,12 +40,14 @@ export default function Practice() {
             <p className="mt-5 max-w-prose leading-relaxed text-sage-700">
               Non è una gara con il corpo di ieri né con quello di nessun altro.
               È un percorso di crescita personale, in cui ogni sessione aggiunge
-              un dettaglio di consapevolezza a quello precedente.
+              un dettaglio di consapevolezza a quello precedente. E il fatto di
+              praticare da casa lo rende sostenibile: niente spostamenti, nessun
+              orario da rincorrere, solo il tempo che dedichi davvero a te.
             </p>
 
             <ImagePlaceholder
               label="Immagine La Pratica"
-              caption="Sala, tappetini, spazio che respira"
+              caption="Il tuo angolo di pratica, a casa"
               className="mt-10 aspect-[16/10] w-full rounded-3xl"
             />
           </div>

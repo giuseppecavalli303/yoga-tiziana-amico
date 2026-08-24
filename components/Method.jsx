@@ -1,19 +1,21 @@
 const blocks = [
   {
     title: "Classi a numero chiuso",
-    lead: "Massimo otto persone.",
-    body: "Un gruppo piccolo significa che nessuno resta indietro e nessuno passa inosservato. Conosco il tuo respiro, il tuo ritmo e il punto esatto in cui la tua pratica sta crescendo.",
+    lead: "Massimo otto persone, tutte visibili.",
+    body: "Il gruppo resta piccolo perché su Zoom vi tengo tutti in un'unica schermata, senza mai perdere di vista nessuno. Conosco il tuo respiro, il tuo ritmo e il punto esatto in cui la tua pratica sta crescendo.",
     icon: (
       <>
-        <circle cx="12" cy="12" r="8.5" />
-        <circle cx="12" cy="12" r="3" />
+        <rect x="3" y="4" width="7.5" height="7" rx="1.6" />
+        <rect x="13.5" y="4" width="7.5" height="7" rx="1.6" />
+        <rect x="3" y="13" width="7.5" height="7" rx="1.6" />
+        <rect x="13.5" y="13" width="7.5" height="7" rx="1.6" />
       </>
     ),
   },
   {
     title: "Correzione posturale in tempo reale",
     lead: "Adattamento dinamico, dal vivo.",
-    body: "Cammino tra i tappetini durante tutta la lezione. Ogni asana viene calibrata su di te mentre la esegui, con varianti e supporti proposti nell'istante in cui servono.",
+    body: "Ti guardo attraverso la telecamera per tutta la lezione: ti chiamo per nome, indico dove spostare il peso, propongo la variante nell'istante in cui serve. Nessuna lezione registrata, nessun video da seguire da soli.",
     icon: (
       <>
         <path d="M4 18c3.5 0 4.5-6 8-6s4.5 6 8 6" />
@@ -24,7 +26,7 @@ const blocks = [
   {
     title: "Rispetto della biomeccanica",
     lead: "Principi posturali dentro la pratica.",
-    body: "La mia formazione in ginnastica posturale entra nello yoga come criterio di sicurezza: allineamenti corretti, articolazioni protette, progressioni costruite sulla struttura reale del tuo corpo.",
+    body: "La mia formazione in ginnastica posturale entra nello yoga come criterio di sicurezza: allineamenti spiegati con precisione, articolazioni protette, progressioni costruite sulla struttura reale del tuo corpo.",
     icon: (
       <>
         <path d="M12 3v18" />
@@ -48,9 +50,10 @@ export default function Method() {
             </span>
           </h2>
           <p className="mt-7 leading-relaxed text-sage-700">
-            La libertà nello yoga nasce da una cornice solida. Tre scelte
-            precise rendono ogni lezione uno spazio in cui puoi lasciare andare
-            il controllo, sapendo che la tecnica è custodita.
+            La libertà nello yoga nasce da una cornice solida — e praticare da
+            casa la richiede ancora più precisa. Tre scelte precise rendono ogni
+            lezione uno spazio in cui puoi lasciare andare il controllo, sapendo
+            che la tecnica è custodita.
           </p>
         </div>
 
@@ -96,8 +99,11 @@ export default function Method() {
         </div>
 
         <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-relaxed text-sage-600">
-          Nessuna fretta di arrivare a una forma perfetta: la sicurezza è la
-          condizione che permette alla pratica di durare negli anni.
+          Ti serve pochissimo per iniziare: un tappetino, due metri di spazio
+          libero e un dispositivo appoggiato di lato, così che io possa vederti
+          per intero. Nessuna fretta di arrivare a una forma perfetta: la
+          sicurezza è la condizione che permette alla pratica di durare negli
+          anni.
         </p>
       </div>
     </section>
