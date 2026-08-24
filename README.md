@@ -63,7 +63,7 @@ yoga/
 │  └─ ImagePlaceholder.jsx  # segnaposto immagine riutilizzabile
 ├─ public/
 │  ├─ hero-yoga.jpg     # foto della sezione Hero (2:3 verticale)
-│  └─ la-pratica-yoga.jpg # foto della sezione La Pratica (2:3 verticale)
+│  └─ la-pratica-yoga.jpg # foto della sezione La Pratica (lezione su Zoom)
 ├─ tailwind.config.js   # palette, font, animazioni
 ├─ postcss.config.js
 ├─ next.config.mjs
@@ -122,11 +122,10 @@ Per sostituire la foto mantenendo la resa, usa un **ritratto verticale in rappor
 aggiorna il nome nell'import. Se il nuovo scatto ha un rapporto diverso, cambia anche il
 contenitore: il codice non ritaglia nulla, quindi la pagina si adatta al file.
 
-**La Pratica — foto reale.** `public/la-pratica-yoga.jpg` (1684×2528, 2:3) è collegata in
-[`components/Practice.jsx`](components/Practice.jsx) con lo stesso schema. Qui il contenitore
-impone `aspect-[4/5]`: mostra l'83% dell'altezza, tagliando solo un po' di soffitto in alto e
-di pavimento in basso. Per cambiare la porzione visibile aggiungi `object-top` o `object-bottom`
-alla `className`.
+**La Pratica — foto reale.** `public/la-pratica-yoga.jpg` (1460×1586, quasi quadrata) è collegata
+in [`components/Practice.jsx`](components/Practice.jsx) con lo stesso schema della Hero. Anche qui
+nessun ritaglio: `h-auto w-full` lascia il rapporto nativo, così restano visibili sia lo schermo
+con la griglia Zoom sia chi pratica sul tappetino.
 
 **Segnaposto.** Il componente [`components/ImagePlaceholder.jsx`](components/ImagePlaceholder.jsx)
 non è più usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una foto.

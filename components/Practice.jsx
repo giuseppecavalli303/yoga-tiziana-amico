@@ -47,18 +47,17 @@ export default function Practice() {
             </p>
 
             {/*
-              Foto reale in /public/la-pratica-yoga.jpg (1684×2528, 2:3).
-              Il contenitore è 4/5: mostra l'83% dell'altezza, quindi taglia
-              solo un po' di soffitto in alto e di pedana in basso, lasciando
-              intatte le vetrate e tutte le persone.
+              Foto reale in /public/la-pratica-yoga.jpg (1460×1586, quasi
+              quadrata). Nessun ritaglio: il rapporto nativo tiene dentro sia
+              lo schermo con la griglia Zoom sia chi pratica sul tappetino.
             */}
             <div className="relative mx-auto mt-10 w-full max-w-md lg:max-w-none">
               <Image
                 src={practiceImage}
-                alt="Una classe di yoga in una sala luminosa con vetrate ad arco: tutti i praticanti nella posizione dell'albero"
+                alt="Lezione di yoga online: l'insegnante seduta sul tappetino guida il gruppo collegato su Zoom, visibile sullo schermo davanti a lei"
                 placeholder="blur"
                 sizes="(max-width: 1023px) 100vw, 40vw"
-                className="aspect-[4/5] w-full rounded-3xl object-cover ring-1 ring-sage-200/70"
+                className="h-auto w-full rounded-3xl object-cover ring-1 ring-sage-200/70"
               />
             </div>
           </div>
