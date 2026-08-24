@@ -1,31 +1,25 @@
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import { MAILTO_URL, PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contacts";
-
-/**
- * Prenotazione — Calendly.
- *
- * Sostituisci CALENDLY_URL con il tuo link reale
- * (es. "https://calendly.com/tiziana-amico/prima-lezione").
- * Il parametro embed_domain/embed_type e i colori sono già impostati
- * per integrarsi con la palette della pagina.
- */
-const CALENDLY_URL =
-  "https://calendly.com/tiziana-amico/prima-lezione-gratuita" +
-  "?hide_gdpr_banner=1&background_color=fdfbf8&text_color=2e3630&primary_color=5b6f5e";
+import { EMAIL, MAILTO_URL, PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contacts";
 
 const steps = [
   {
-    title: "Scegli il momento",
-    body: "Un orario in cui puoi collegarti senza fretta.",
+    title: "Mi scrivi",
+    body: "Due righe su WhatsApp o una email: basta il tuo nome.",
   },
   {
-    title: "Ricevi il link Zoom",
-    body: "Arriva via email subito dopo la prenotazione.",
+    title: "Ti rispondo io",
+    body: "Ti racconto gli orari, il livello e come si svolge una lezione.",
   },
   {
     title: "Pratichi con noi",
-    body: "Da casa tua, in diretta. Gratis e senza impegno.",
+    body: "Ti mando il link Zoom. La prima lezione è gratuita.",
   },
+];
+
+const hints = [
+  "Se hai già praticato yoga, anche solo qualche volta",
+  "In quali giorni o fasce orarie saresti libero/a",
+  "Se hai domande o dubbi: rispondo a tutti, sempre",
 ];
 
 export default function Booking() {
@@ -35,7 +29,7 @@ export default function Booking() {
       className="scroll-mt-24 bg-sage-800 py-24 text-sand-100 sm:py-32"
     >
       <div className="section">
-        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
             <p className="text-xs uppercase tracking-widest text-sage-300">
               Inizia Ora
@@ -47,10 +41,9 @@ export default function Booking() {
               </span>
             </h2>
             <p className="mt-7 max-w-prose leading-relaxed text-sage-100/85">
-              Scegli direttamente dal calendario il giorno della tua prima
-              lezione di yoga online. Nessun modulo da compilare, nessuna
-              attesa: la conferma con il link Zoom arriva via email in pochi
-              secondi.
+              Non c&apos;è un modulo da compilare né un calendario da
+              consultare: mi scrivi, ti richiamo io e troviamo insieme il
+              momento giusto per la tua prima lezione.
             </p>
 
             <ol className="mt-10 space-y-6">
@@ -66,61 +59,73 @@ export default function Booking() {
                 </li>
               ))}
             </ol>
-
-            <div className="mt-10 border-t border-sage-600 pt-8">
-              <p className="text-sm text-sage-100/70">
-                Preferisci parlarne prima? Scrivimi: rispondo personalmente.
-              </p>
-
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-whatsapp-600 px-6 py-3.5 text-sm font-medium text-sand-50 transition hover:bg-whatsapp-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sage-800"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  WhatsApp {PHONE_DISPLAY}
-                </a>
-
-                <a
-                  href={MAILTO_URL}
-                  className="inline-flex items-center justify-center gap-3 rounded-full border border-sage-500 px-6 py-3.5 text-sm text-sand-100 transition hover:border-sand-200 hover:text-sand-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-200"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    className="h-5 w-5"
-                  >
-                    <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
-                    <path d="m3.5 7 8.5 6 8.5-6" />
-                  </svg>
-                  Scrivi una email
-                </a>
-              </div>
-            </div>
           </div>
 
-          <div className="rounded-[2rem] border border-sage-600 bg-sand-50 p-3 shadow-2xl sm:p-4">
-            {/* --- Calendly inline widget (placeholder) --- */}
-            <iframe
-              src={CALENDLY_URL}
-              title="Prenota la tua prima lezione gratuita di yoga con Tiziana Amico"
-              loading="lazy"
-              className="h-[680px] w-full rounded-3xl border-0 bg-sand-50"
-            />
-            <p className="px-4 py-3 text-center text-xs text-sage-600">
-              Se il calendario non compare, sostituisci{" "}
-              <code className="rounded bg-sage-100 px-1.5 py-0.5 text-sage-800">
-                CALENDLY_URL
-              </code>{" "}
-              in <code>components/Booking.jsx</code> con il tuo link Calendly.
+          {/* Pannello di contatto diretto, al posto del calendario */}
+          <div className="rounded-[2rem] border border-sage-600 bg-sand-50 p-8 text-ink shadow-2xl sm:p-10">
+            <p className="eyebrow">Scrivimi</p>
+            <p className="mt-4 font-serif text-3xl leading-snug text-sage-900">
+              Ti ricontatto io,
+              <span className="block italic text-sage-600">
+                di solito in giornata.
+              </span>
             </p>
+
+            <div className="mt-8 flex flex-col gap-3">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-whatsapp-600 px-6 py-4 text-sm font-medium text-sand-50 transition hover:bg-whatsapp-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp-400 focus-visible:ring-offset-2"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                Scrivi su WhatsApp — {PHONE_DISPLAY}
+              </a>
+
+              <a
+                href={MAILTO_URL}
+                className="inline-flex items-center justify-center gap-3 rounded-full border border-sage-300 px-6 py-4 text-sm font-medium text-sage-800 transition hover:border-sage-500 hover:text-sage-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-400"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  className="h-5 w-5"
+                >
+                  <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+                  <path d="m3.5 7 8.5 6 8.5-6" />
+                </svg>
+                {EMAIL}
+              </a>
+            </div>
+
+            <div className="mt-9 border-t border-sage-200 pt-7">
+              <p className="text-sm font-medium text-sage-900">
+                Se vuoi, raccontami già:
+              </p>
+              <ul className="mt-4 space-y-3">
+                {hints.map((hint) => (
+                  <li
+                    key={hint}
+                    className="flex gap-3 text-sm leading-relaxed text-sage-700"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-clay-400"
+                    />
+                    {hint}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-7 text-xs leading-relaxed text-sage-600">
+                Nessun impegno e nessuna iscrizione: la prima lezione di yoga su
+                Zoom è gratuita, e decidi dopo averla provata.
+              </p>
+            </div>
           </div>
         </div>
       </div>

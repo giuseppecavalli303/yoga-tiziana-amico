@@ -56,7 +56,7 @@ yoga/
 │  ├─ Practice.jsx      # 2. La Pratica — respiro, flessibilità, equilibrio mentale
 │  ├─ Method.jsx        # 3. La Sicurezza (Il Metodo) — 3 blocchi
 │  ├─ Testimonials.jsx  # 4. Testimonianze degli allievi
-│  ├─ Booking.jsx       # 5. Inizia Ora — iframe Calendly (placeholder)
+│  ├─ Booking.jsx       # 5. Inizia Ora — contatto diretto WhatsApp/email
 │  ├─ Footer.jsx
 │  ├─ WhatsAppFloat.jsx # pulsante WhatsApp fluttuante
 │  ├─ icons/WhatsAppIcon.jsx
@@ -78,25 +78,13 @@ yoga/
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
 | 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica** |
 | 4 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
-| 5 | Inizia Ora | `#inizia-ora` | Prenotazione via iframe Calendly + i tre passi (scegli l'orario → ricevi il link Zoom → pratichi) |
+| 5 | Inizia Ora | `#inizia-ora` | Contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi). Nessun calendario: è Tiziana a ricontattare |
 
 ---
 
 ## Personalizzazione
 
-### 1. Link Calendly
-
-In [`components/Booking.jsx`](components/Booking.jsx) sostituisci la costante `CALENDLY_URL`
-con il link reale, ad esempio:
-
-```js
-const CALENDLY_URL =
-  "https://calendly.com/tuo-utente/prima-lezione?hide_gdpr_banner=1&background_color=fdfbf8&text_color=2e3630&primary_color=5b6f5e";
-```
-
-I parametri di colore sono già allineati alla palette della pagina: cambiali solo se cambi il tema.
-
-### 2. Immagini
+### 1. Immagini
 
 **Hero — foto reale.** `public/hero-yoga.jpg` (1066×1600, rapporto 2:3) è già collegata in
 [`components/Hero.jsx`](components/Hero.jsx) tramite import statico:
@@ -130,7 +118,7 @@ con la griglia Zoom sia chi pratica sul tappetino.
 **Segnaposto.** Il componente [`components/ImagePlaceholder.jsx`](components/ImagePlaceholder.jsx)
 non è più usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una foto.
 
-### 3. Testimonianze
+### 2. Testimonianze
 
 Le citazioni in [`components/Testimonials.jsx`](components/Testimonials.jsx) sono di esempio:
 sostituiscile con le parole reali degli allievi, raccolte con il loro consenso. Ogni voce è un
@@ -149,7 +137,7 @@ La prima voce dell'array occupa due colonne su desktop: mettici la testimonianza
 Per usare le foto al posto delle iniziali, sostituisci lo `<span>` dell'avatar con un
 `next/image` da 44×44 px e `className="rounded-full object-cover"`.
 
-### 4. Contatti (WhatsApp ed email)
+### 3. Contatti (WhatsApp ed email)
 
 Tutti i contatti vivono in un solo file: [`lib/contacts.js`](lib/contacts.js). Modifica lì e
 l'aggiornamento si propaga a navbar, sezione *Inizia Ora*, footer e pulsante fluttuante.
@@ -171,13 +159,13 @@ Dove compare WhatsApp:
 | Punto | File | Comportamento |
 |-------|------|---------------|
 | Navbar | [`components/Navbar.jsx`](components/Navbar.jsx) | Icona + numero da `xl`, solo icona su mobile |
-| Sezione *Inizia Ora* | [`components/Booking.jsx`](components/Booking.jsx) | Pulsante pieno accanto a «Scrivi una email» |
+| Sezione *Inizia Ora* | [`components/Booking.jsx`](components/Booking.jsx) | Pulsante principale del pannello di contatto |
 | Footer | [`components/Footer.jsx`](components/Footer.jsx) | Numero ed email per esteso |
 | Pulsante fluttuante | [`components/WhatsAppFloat.jsx`](components/WhatsAppFloat.jsx) | Fisso in basso a destra, si espande al passaggio del mouse su desktop |
 
 Per rimuovere il pulsante fluttuante, togli `<WhatsAppFloat />` da [`app/page.jsx`](app/page.jsx).
 
-### 5. Palette
+### 4. Palette
 
 Definita in [`tailwind.config.js`](tailwind.config.js):
 
@@ -197,7 +185,8 @@ Tipografia: **Cormorant Garamond** (titoli, serif elegante) + **Inter** (testo),
 ## Note tecniche
 
 - Solo `Navbar.jsx` è un client component (`"use client"`): tutto il resto è renderizzato lato server.
-- Nessuna dipendenza esterna oltre a Next, React e Tailwind: le icone sono SVG inline.
+- Nessuna dipendenza esterna oltre a Next, React e Tailwind: le icone sono SVG inline e la
+  pagina non carica script o iframe di terze parti (niente cookie banner da gestire).
 - Accessibilità: `lang="it"`, gerarchia `h1 → h3` corretta, `focus-visible` su tutti i CTA,
-  iframe con `title` descrittivo, animazioni disattivate con `prefers-reduced-motion`.
+  link solo-icona con `aria-label`, animazioni disattivate con `prefers-reduced-motion`.
 - Responsive: layout a colonna singola sotto `md`, griglie a 2/3 colonne da `md` in su.

@@ -133,7 +133,7 @@ export default function Testimonials() {
               href="#inizia-ora"
               className="mt-8 inline-flex items-center gap-2 self-start rounded-full bg-sand-50 px-6 py-3 text-sm font-medium text-sage-800 transition hover:bg-sand-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-200"
             >
-              Prenota il tuo posto
+              Scrivimi per iniziare
               <span aria-hidden="true">→</span>
             </a>
           </li>

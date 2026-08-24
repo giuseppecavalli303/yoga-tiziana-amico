@@ -52,8 +52,8 @@ export default function Hero() {
               <rect x="2.5" y="6" width="13" height="12" rx="2.5" />
               <path d="m15.5 11 6-3.5v9l-6-3.5" />
             </svg>
-            Lezioni dal vivo su Zoom: il link ti arriva via email, pratichi da
-            casa tua.
+            Lezioni dal vivo su Zoom: concordiamo insieme l'orario e ti mando
+            il link, pratichi da casa tua.
           </p>
 
           <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-sage-200 pt-8">
