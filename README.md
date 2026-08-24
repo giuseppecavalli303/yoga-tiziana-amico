@@ -62,7 +62,8 @@ yoga/
 │  ├─ icons/WhatsAppIcon.jsx
 │  └─ ImagePlaceholder.jsx  # segnaposto immagine riutilizzabile
 ├─ public/
-│  └─ hero-yoga.jpg     # foto della sezione Hero (2:3 verticale)
+│  ├─ hero-yoga.jpg     # foto della sezione Hero (2:3 verticale)
+│  └─ la-pratica-yoga.jpg # foto della sezione La Pratica (2:3 verticale)
 ├─ tailwind.config.js   # palette, font, animazioni
 ├─ postcss.config.js
 ├─ next.config.mjs
@@ -121,12 +122,14 @@ Per sostituire la foto mantenendo la resa, usa un **ritratto verticale in rappor
 aggiorna il nome nell'import. Se il nuovo scatto ha un rapporto diverso, cambia anche il
 contenitore: il codice non ritaglia nulla, quindi la pagina si adatta al file.
 
-**Altre sezioni.** I riquadri `ImagePlaceholder` (in *La Pratica*) sono ancora segnaposto
-animati. Per sostituirli:
+**La Pratica — foto reale.** `public/la-pratica-yoga.jpg` (1684×2528, 2:3) è collegata in
+[`components/Practice.jsx`](components/Practice.jsx) con lo stesso schema. Qui il contenitore
+impone `aspect-[4/5]`: mostra l'83% dell'altezza, tagliando solo un po' di soffitto in alto e
+di pavimento in basso. Per cambiare la porzione visibile aggiungi `object-top` o `object-bottom`
+alla `className`.
 
-1. copia il file in `public/`;
-2. rimpiazza il componente con un `<Image>` come sopra, avvolto in un contenitore `relative`
-   se preferisci usare `fill` con un rapporto fisso.
+**Segnaposto.** Il componente [`components/ImagePlaceholder.jsx`](components/ImagePlaceholder.jsx)
+non è più usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una foto.
 
 ### 3. Testimonianze
 

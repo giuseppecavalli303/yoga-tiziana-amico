@@ -1,4 +1,5 @@
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
+import practiceImage from "@/public/la-pratica-yoga.jpg";
 
 const pillars = [
   {
@@ -45,11 +46,21 @@ export default function Practice() {
               orario da rincorrere, solo il tempo che dedichi davvero a te.
             </p>
 
-            <ImagePlaceholder
-              label="Immagine La Pratica"
-              caption="Il tuo angolo di pratica, a casa"
-              className="mt-10 aspect-[16/10] w-full rounded-3xl"
-            />
+            {/*
+              Foto reale in /public/la-pratica-yoga.jpg (1684×2528, 2:3).
+              Il contenitore è 4/5: mostra l'83% dell'altezza, quindi taglia
+              solo un po' di soffitto in alto e di pedana in basso, lasciando
+              intatte le vetrate e tutte le persone.
+            */}
+            <div className="relative mx-auto mt-10 w-full max-w-md lg:max-w-none">
+              <Image
+                src={practiceImage}
+                alt="Una classe di yoga in una sala luminosa con vetrate ad arco: tutti i praticanti nella posizione dell'albero"
+                placeholder="blur"
+                sizes="(max-width: 1023px) 100vw, 40vw"
+                className="aspect-[4/5] w-full rounded-3xl object-cover ring-1 ring-sage-200/70"
+              />
+            </div>
           </div>
 
           <ol className="space-y-4">
