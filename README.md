@@ -57,7 +57,8 @@ yoga/
 │  ├─ WhatsAppFloat.jsx # pulsante WhatsApp fluttuante
 │  ├─ icons/WhatsAppIcon.jsx
 │  └─ ImagePlaceholder.jsx  # segnaposto immagine riutilizzabile
-├─ public/              # qui vanno le foto reali
+├─ public/
+│  └─ hero-yoga.jpg     # foto della sezione Hero (2:3 verticale)
 ├─ tailwind.config.js   # palette, font, animazioni
 ├─ postcss.config.js
 ├─ next.config.mjs
@@ -68,7 +69,7 @@ yoga/
 
 | # | Sezione | Ancora | Contenuto |
 |---|---------|--------|-----------|
-| 1 | Hero | `#top` | Immagine suggestiva (placeholder), titolo sulla riconnessione mente-corpo, CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
+| 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
 | 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** · **Correzione posturale in tempo reale** · **Rispetto della biomeccanica** |
 | 4 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
@@ -92,18 +93,36 @@ I parametri di colore sono già allineati alla palette della pagina: cambiali so
 
 ### 2. Immagini
 
-I riquadri `ImagePlaceholder` sono segnaposto animati. Per usare una foto:
-
-1. copia il file in `public/` (es. `public/hero.jpg`);
-2. sostituisci il componente con `next/image`:
+**Hero — foto reale.** `public/hero-yoga.jpg` (1066×1600, rapporto 2:3) è già collegata in
+[`components/Hero.jsx`](components/Hero.jsx) tramite import statico:
 
 ```jsx
 import Image from "next/image";
+import heroImage from "@/public/hero-yoga.jpg";
 
-<div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
-  <Image src="/hero.jpg" alt="Tiziana durante la pratica" fill className="object-cover" priority />
-</div>
+<Image
+  src={heroImage}
+  alt="…"
+  priority                                   // è l'elemento LCP della pagina
+  placeholder="blur"                         // blur generato in automatico
+  sizes="(max-width: 1023px) 100vw, 45vw"    // 1 colonna sotto lg, ~45% sopra
+  className="h-auto w-full rounded-[2rem] object-cover …"
+/>
 ```
+
+L'import statico (invece della stringa `"/hero-yoga.jpg"`) fa conoscere a Next larghezza e
+altezza in fase di build: niente layout shift e blur placeholder senza configurazione.
+
+Per sostituire la foto mantenendo la resa, usa un **ritratto verticale in rapporto 2:3** e
+aggiorna il nome nell'import. Se il nuovo scatto ha un rapporto diverso, cambia anche il
+contenitore: il codice non ritaglia nulla, quindi la pagina si adatta al file.
+
+**Altre sezioni.** I riquadri `ImagePlaceholder` (in *La Pratica*) sono ancora segnaposto
+animati. Per sostituirli:
+
+1. copia il file in `public/`;
+2. rimpiazza il componente con un `<Image>` come sopra, avvolto in un contenitore `relative`
+   se preferisci usare `fill` con un rapporto fisso.
 
 ### 3. Testimonianze
 

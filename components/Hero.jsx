@@ -1,4 +1,5 @@
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
+import heroImage from "@/public/hero-yoga.jpg";
 
 export default function Hero() {
   return (
@@ -52,12 +53,23 @@ export default function Hero() {
           </dl>
         </div>
 
-        <div className="relative">
-          <ImagePlaceholder
-            label="Immagine Hero"
-            caption="Luce del mattino, tappetino, respiro"
-            className="aspect-[4/5] w-full rounded-[2rem] shadow-[0_30px_80px_-40px_rgba(46,54,48,0.45)]"
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          {/*
+            Foto reale in /public/hero-yoga.jpg (1066×1600, rapporto 2:3).
+            L'import statico permette a next/image di conoscere le dimensioni
+            (zero layout shift) e di generare da solo il blur di caricamento.
+            Il contenitore mantiene il 2:3 nativo a ogni breakpoint: la figura
+            resta intera, dalla testa ai piedi, senza ritagli.
+          */}
+          <Image
+            src={heroImage}
+            alt="Insegnante di yoga nella posizione dell'albero (Vrksasana), mani unite al petto, su un tappetino"
+            priority
+            placeholder="blur"
+            sizes="(max-width: 1023px) 100vw, 45vw"
+            className="h-auto w-full rounded-[2rem] object-cover shadow-[0_30px_80px_-40px_rgba(46,54,48,0.45)] ring-1 ring-sage-200/70"
           />
+
           <div className="absolute -bottom-8 -left-4 hidden max-w-xs rounded-2xl border border-sage-200 bg-sand-50/95 p-6 shadow-lg backdrop-blur sm:block">
             <p className="font-serif text-lg italic leading-snug text-sage-800">
               «La pratica inizia nel momento in cui te ne accorgi.»
