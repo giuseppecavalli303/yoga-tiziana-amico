@@ -26,7 +26,7 @@ export default function Footer() {
               </span>{" "}
               Online su Zoom il martedì e il giovedì alle 19. In presenza a Roma
               presso {VENUE.name}, {VENUE.address}: martedì alle 10 e giovedì
-              alle 11, 60 minuti.
+              alle 11.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:gap-6">

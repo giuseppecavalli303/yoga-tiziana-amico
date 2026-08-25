@@ -1,6 +1,6 @@
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { EMAIL, MAILTO_URL, PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contacts";
-import { SCHEDULE } from "@/lib/schedule";
+import { LESSON_DURATION, SCHEDULE } from "@/lib/schedule";
 
 const steps = [
   {
@@ -66,7 +66,12 @@ export default function Booking() {
 
           {/* Orari fissi + contatto diretto */}
           <div className="rounded-[2rem] border border-sage-600 bg-sand-50 p-8 text-ink shadow-2xl sm:p-10">
-            <p className="eyebrow">Gli orari della settimana</p>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <p className="eyebrow">Gli orari della settimana</p>
+              <p className="text-xs text-sage-600">
+                Ogni lezione dura {LESSON_DURATION}
+              </p>
+            </div>
 
             <ul className="mt-6 space-y-4">
               {SCHEDULE.map((course) => (

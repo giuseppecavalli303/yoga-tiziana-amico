@@ -173,7 +173,10 @@ Orari attuali:
 |-------|---------|--------|
 | Yoga | Online su Zoom | Lunedì e mercoledì, 19:00 |
 | Ginnastica posturale | Online su Zoom | Martedì e giovedì, 19:00 |
-| Ginnastica posturale | In presenza, 60 minuti | Martedì 10:00 · Giovedì 11:00 |
+| Ginnastica posturale | In presenza (solo posturale, al REC) | Martedì 10:00 · Giovedì 11:00 |
+
+Tutte le lezioni durano 60 minuti (`LESSON_DURATION`), dichiarati una volta sola in cima al
+pannello degli orari invece di ripeterli su ogni riquadro.
 
 `primary: true` colora il riquadro con lo sfondo salvia: serve a tenere lo yoga in primo piano
 rispetto alla posturale. `YOGA_SCHEDULE_SHORT` è la versione discorsiva usata nella Hero.
