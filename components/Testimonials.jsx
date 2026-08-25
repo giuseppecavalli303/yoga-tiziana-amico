@@ -1,45 +1,40 @@
 /**
- * Testimonianze degli allievi.
+ * Testimonianze reali degli allievi, riportate integralmente.
+ * Corretti solo due refusi evidenti nel testo di Luca
+ * («un'altro» → «un altro», «postura le» → «posturale»).
  *
- * Sostituisci i contenuti dell'array con le parole reali degli allievi
- * (con il loro consenso). Il campo `initials` genera l'avatar tipografico:
- * per usare una foto, vedi le istruzioni nel README.
+ * La prima voce occupa due colonne su desktop: è quella di Luca perché
+ * risponde all'obiezione decisiva — perché una lezione dal vivo e non
+ * un video su YouTube.
  */
 const testimonials = [
   {
     quote:
-      "Ero arrivata pensando di iscrivermi a un corso. Dopo un anno mi accorgo che ho imparato un modo di respirare che mi accompagna ovunque, anche nelle giornate in cui il tappetino resta arrotolato.",
-    name: "Chiara M.",
-    detail: "Pratica da 1 anno",
-    initials: "CM",
+      "Dopo diverse prove di esercizio dello yoga online ho conosciuto Tiziana: davvero un altro tipo di esperienza, soprattutto perché grazie a Zoom lei mi ha guidato (e mi guida) con estrema attenzione nelle varie posizioni, esercizi, correggendo ogni minimo errore. Questa è una enorme differenza rispetto all'esecuzione di una lezione online seguita su YouTube o altri canali, perché si apprende e si migliora concretamente grazie alla guida di una vera insegnante che interagisce direttamente. Pratico da tempo sia yoga che ginnastica posturale, consiglio vivamente!",
+    name: "Luca",
+    detail: "Yoga e ginnastica posturale",
+    initials: "L",
   },
   {
     quote:
-      "Temevo che online significasse essere lasciato a me stesso davanti a un video. Invece Tiziana mi chiama per nome, corregge, propone la variante: mi era successo di sentirmi meno seguito in una palestra vera.",
-    name: "Davide R.",
-    detail: "Pratica da 8 mesi",
-    initials: "DR",
+      "Ho iniziato yoga con Tiziana in una palestra di Brescia e mi sono subito innamorata del suo metodo di insegnamento, per questo ho continuato a seguire i suoi corsi anche da remoto durante il lockdown. Tiziana è un'insegnante molto attenta, sempre precisa nelle spiegazioni e disponibile a soddisfare i bisogni di tutti con esercizi sempre diversi. Il tutto viene poi coronato dalla sua gentilezza, dalla sua positività e dalla sua voce rilassante che ti libera veramente da ogni stress e ti permette di concludere la lezione con un'energia nuova.",
+    name: "Lara",
+    detail: "Dalla palestra di Brescia, poi online",
+    initials: "LA",
   },
   {
     quote:
-      "Mi sono avvicinata allo yoga senza alcuna esperienza e con zero flessibilità. Nessuno mi ha mai chiesto di forzare: ogni posizione è stata costruita sul mio corpo, un passo alla volta.",
-    name: "Elena T.",
-    detail: "Pratica da 6 mesi",
-    initials: "ET",
+      "Ho iniziato a fare yoga e ginnastica posturale online con Tiziana due anni fa. Tiziana, oltre ad essere estremamente professionale, è molto attenta, paziente e precisa. Ho acquisito una buona tonicità muscolare e un benessere fisico che, sicuramente, continuerò a migliorare negli anni a venire grazie alle sue indicazioni. Ho apprezzato che Tiziana non abbia trascurato l'aspetto meditativo, che ha curato e trasmesso in modo naturale e diretto.",
+    name: "Gabriella",
+    detail: "Yoga e posturale online da due anni",
+    initials: "G",
   },
   {
     quote:
-      "La parte che non mi aspettavo sono i minuti di silenzio finali. Chiudo il computer con una lucidità che dura tutta la settimana: è diventata la cosa che proteggo di più nella mia agenda.",
-    name: "Marco B.",
-    detail: "Pratica da 2 anni",
-    initials: "MB",
-  },
-  {
-    quote:
-      "Si sente che dietro c'è uno studio serio del movimento. Le correzioni arrivano al momento giusto e con delicatezza, e questo mi ha dato la fiducia per lasciarmi andare davvero nella pratica.",
-    name: "Silvia P.",
-    detail: "Pratica da 1 anno e mezzo",
-    initials: "SP",
+      "Ho incominciato a fare yoga online con Tiziana due anni fa. Dopo il covid non mi andava di tornare in palestra. Grazie a delle amicizie che già seguivano le sue lezioni ho sperimentato lo yoga online. Cosa dire? Comodo, pratico ed anche economico! Devo ringraziare i miei amici ma anche e soprattutto l'insegnante Tiziana per la sua pazienza (molta) nello spiegare con estrema semplicità ma altrettanta precisione tutte le posizioni ed i loro benefici. Sono contenta soprattutto della consapevolezza fisica e mentale cresciuta in me.",
+    name: "Elena",
+    detail: "Yoga online da due anni",
+    initials: "E",
   },
 ];
 
@@ -75,9 +70,9 @@ export default function Testimonials() {
             </span>
           </h2>
           <p className="mt-7 leading-relaxed text-sage-700">
-            Le trasformazioni più profonde raramente si vedono in una fotografia.
-            Ecco cosa dicono gli allievi dopo qualche mese di pratica costante,
-            un collegamento dopo l'altro.
+            Le trasformazioni più profonde raramente si vedono in una
+            fotografia. Ecco le parole di chi pratica con me: qualcuno da
+            qualche mese, qualcuno da anni.
           </p>
         </div>
 
@@ -93,7 +88,7 @@ export default function Testimonials() {
 
               <blockquote
                 className={`mt-6 flex-1 font-serif leading-relaxed text-sage-800 ${
-                  i === 0 ? "text-2xl sm:text-[1.7rem]" : "text-xl"
+                  i === 0 ? "text-xl sm:text-2xl" : "text-lg"
                 }`}
               >
                 {item.quote}

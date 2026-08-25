@@ -81,7 +81,7 @@ yoga/
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
 | 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica**, più il blocco «Gli ultimi cinque minuti» sul confronto di fine lezione |
 | 4 | Chi sono | `#chi-sono` | Profilo in prima persona: danza dal 1994, Accademia Nazionale di Danza, stile praticato, riga credenziali |
-| 5 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
+| 5 | Testimonianze | `#testimonianze` | Le voci degli allievi: quattro testimonianze reali + invito alla prima lezione |
 | 6 | Inizia Ora | `#inizia-ora` | Orari fissi della settimana + contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi) e le lezioni individuali |
 
 ---
@@ -129,9 +129,10 @@ usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una
 
 ### 2. Testimonianze
 
-Le citazioni in [`components/Testimonials.jsx`](components/Testimonials.jsx) sono di esempio:
-sostituiscile con le parole reali degli allievi, raccolte con il loro consenso. Ogni voce è un
-oggetto dell'array `testimonials`:
+Le quattro citazioni in [`components/Testimonials.jsx`](components/Testimonials.jsx) sono **reali**
+(Luca, Lara, Gabriella, Elena) e riportate integralmente: sono stati corretti solo due refusi nel
+testo di Luca. Compaiono solo i nomi di battesimo. Ogni voce è un oggetto dell'array
+`testimonials`:
 
 ```js
 {
@@ -142,7 +143,8 @@ oggetto dell'array `testimonials`:
 }
 ```
 
-La prima voce dell'array occupa due colonne su desktop: mettici la testimonianza più forte.
+La prima voce dell'array occupa due colonne su desktop ed è quella di Luca, perché risponde
+all'obiezione decisiva: perché una lezione dal vivo e non un video su YouTube.
 Per usare le foto al posto delle iniziali, sostituisci lo `<span>` dell'avatar con un
 `next/image` da 44×44 px e `className="rounded-full object-cover"`.
 
