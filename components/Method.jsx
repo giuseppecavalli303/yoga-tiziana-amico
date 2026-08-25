@@ -98,22 +98,23 @@ export default function Method() {
           ))}
         </div>
 
-        {/* Rituale di chiusura: vale per ogni lezione, online e in presenza */}
+        {/* Rituale del dopo-lezione: cinque minuti in più, fuori dai sessanta */}
         <div className="mt-8 flex flex-col gap-6 rounded-3xl bg-sage-800 p-8 text-sand-100 sm:flex-row sm:items-center sm:gap-10 sm:p-10">
           <span
             aria-hidden="true"
             className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-sage-600 font-serif text-2xl text-clay-200"
           >
-            5&apos;
+            +5&apos;
           </span>
           <div>
             <h3 className="font-serif text-2xl leading-snug sm:text-3xl">
-              Gli ultimi cinque minuti sono nostri
+              E dopo, cinque minuti solo nostri
             </h3>
             <p className="mt-3 max-w-prose leading-relaxed text-sage-100/85">
-              A fine lezione restiamo insieme cinque minuti: mi racconti come è
-              andata, sciogliamo i dubbi rimasti, guardiamo cosa ha funzionato e
-              cosa no. Succede sempre, in ogni lezione — online e in presenza.
+              Quando la lezione è finita restiamo insieme altri cinque minuti,
+              fuori dai sessanta: mi racconti come è andata, sciogliamo i dubbi
+              rimasti, guardiamo cosa ha funzionato e cosa no. Succede sempre,
+              dopo ogni lezione — online e in presenza.
             </p>
           </div>
         </div>

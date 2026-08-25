@@ -15,7 +15,7 @@ const pillars = [
   {
     number: "03",
     title: "L'equilibrio mentale",
-    body: "Ogni pratica termina con qualche minuto di silenzio. È lì che la disciplina diventa stile di vita: attenzione, chiarezza, capacità di scegliere invece di reagire.",
+    body: "Ogni pratica si chiude con il rilassamento guidato e la mindfulness. È lì che la disciplina diventa stile di vita: attenzione, chiarezza, capacità di scegliere invece di reagire.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Practice() {
               Insegno yoga come pratica olistica: corpo, respiro e attenzione
               lavorano insieme, mai separati. Le lezioni seguono un ritmo lento
               e costruttivo — si parte dall&apos;ascolto, si attraversa il
-              movimento, si torna al silenzio.
+              movimento, si finisce nel rilassamento.
             </p>
             <p className="mt-5 max-w-prose leading-relaxed text-sage-700">
               Non è una gara con il corpo di ieri né con quello di nessun altro.
