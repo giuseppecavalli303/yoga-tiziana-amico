@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata = {
   title: "Tiziana Amico — Yoga online su Zoom | Riconnetti mente e corpo",
   description:
-    "Yoga online in diretta su Zoom, come stile di vita: respiro, flessibilità ed equilibrio mentale. Classi a numero chiuso, correzione posturale in tempo reale e rispetto della biomeccanica. Prima lezione gratuita.",
+    "Yoga online in diretta su Zoom, lunedì e mercoledì alle 19: respiro, flessibilità ed equilibrio mentale. Classi a numero chiuso, correzione posturale in tempo reale, anche lezioni individuali su misura. Prima lezione gratuita.",
   keywords: [
     "yoga",
     "yoga online",

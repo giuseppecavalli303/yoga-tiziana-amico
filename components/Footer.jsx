@@ -23,8 +23,8 @@ export default function Footer() {
               <span className="font-medium text-sage-900">
                 Anche ginnastica posturale, in presenza.
               </span>{" "}
-              Due incontri a settimana in piccolo gruppo, dedicati al lavoro
-              posturale. Scrivimi per conoscere sede e orari.
+              Martedì e giovedì alle 19, in piccolo gruppo. Scrivimi per
+              conoscere la sede.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:gap-6">

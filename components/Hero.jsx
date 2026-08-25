@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heroImage from "@/public/hero-yoga.jpg";
+import { YOGA_SCHEDULE_SHORT } from "@/lib/schedule";
 
 export default function Hero() {
   return (
@@ -52,14 +53,14 @@ export default function Hero() {
               <rect x="2.5" y="6" width="13" height="12" rx="2.5" />
               <path d="m15.5 11 6-3.5v9l-6-3.5" />
             </svg>
-            Lezioni dal vivo su Zoom: concordiamo insieme l'orario e ti mando
-            il link, pratichi da casa tua.
+            Yoga dal vivo su Zoom, {YOGA_SCHEDULE_SHORT}. Pratichi da casa tua,
+            il link te lo mando io.
           </p>
 
           <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-sage-200 pt-8">
             {[
               { k: "Max 8", v: "persone per classe" },
-              { k: "In diretta", v: "mai lezioni registrate" },
+              { k: "Lun e mer", v: "sempre alle 19:00" },
               { k: "Ogni livello", v: "dal primo respiro" },
             ].map((item) => (
               <div key={item.k}>

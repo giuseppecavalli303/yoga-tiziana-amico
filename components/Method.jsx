@@ -15,7 +15,7 @@ const blocks = [
   {
     title: "Correzione posturale in tempo reale",
     lead: "Adattamento dinamico, dal vivo.",
-    body: "Ti guardo attraverso la telecamera per tutta la lezione: dallo schermo si riconosce benissimo un ginocchio che cede verso l'interno o una spalla che sale a ogni inspirazione. Ti chiamo per nome, indico dove spostare il peso, propongo la variante nell'istante in cui serve. Nessuna lezione registrata, nessun video da seguire da soli.",
+    body: "Attraverso la telecamera ti seguo passo dopo passo: dallo schermo si riconosce benissimo un ginocchio che cede verso l'interno o una spalla che sale a ogni inspirazione. Ti correggo mentre pratichi e, se ne hai bisogno, adatto gli esercizi alle tue esigenze. Nessuna lezione registrata, nessun video da seguire da soli.",
     icon: (
       <>
         <path d="M4 18c3.5 0 4.5-6 8-6s4.5 6 8 6" />
@@ -26,7 +26,7 @@ const blocks = [
   {
     title: "Rispetto della biomeccanica",
     lead: "Principi posturali dentro la pratica.",
-    body: "Vent'anni di danza e la formazione in ginnastica posturale entrano nello yoga come criterio di sicurezza: allineamenti spiegati con precisione, articolazioni protette, progressioni costruite sulla struttura reale del tuo corpo.",
+    body: "Una vita di danza e la formazione in ginnastica posturale entrano nello yoga come criterio di sicurezza: allineamenti spiegati con precisione, articolazioni protette, progressioni costruite sulla struttura reale del tuo corpo.",
     icon: (
       <>
         <path d="M12 3v18" />

@@ -1,25 +1,20 @@
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { EMAIL, MAILTO_URL, PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contacts";
+import { SCHEDULE } from "@/lib/schedule";
 
 const steps = [
   {
     title: "Mi scrivi",
-    body: "Due righe su WhatsApp o una email: basta il tuo nome.",
+    body: "Due righe su WhatsApp o una email, con il giorno che preferisci.",
   },
   {
     title: "Ti rispondo io",
-    body: "Ti racconto gli orari, il livello e come si svolge una lezione.",
+    body: "Ti confermo il posto e ti racconto come si svolge una lezione.",
   },
   {
     title: "Pratichi con noi",
-    body: "Ti mando il link Zoom. La prima lezione è gratuita.",
+    body: "Ti mando il link Zoom. La prima lezione di yoga è gratuita.",
   },
-];
-
-const hints = [
-  "Se hai già praticato yoga, anche solo qualche volta",
-  "In quali giorni o fasce orarie saresti libero/a",
-  "Se hai domande o dubbi: rispondo a tutti, sempre",
 ];
 
 export default function Booking() {
@@ -41,9 +36,9 @@ export default function Booking() {
               </span>
             </h2>
             <p className="mt-7 max-w-prose leading-relaxed text-sage-100/85">
-              Non c&apos;è un modulo da compilare né un calendario da
-              consultare: mi scrivi, ti richiamo io e troviamo insieme il
-              momento giusto per la tua prima lezione.
+              Gli orari sono fissi e le lezioni si ripetono ogni settimana: non
+              devi concordare nulla, scegli il giorno e mi scrivi. Ti rispondo
+              io con la conferma del posto.
             </p>
 
             <ol className="mt-10 space-y-6">
@@ -59,19 +54,47 @@ export default function Booking() {
                 </li>
               ))}
             </ol>
+
+            <p className="mt-10 border-t border-sage-600 pt-7 text-sm leading-relaxed text-sage-100/75">
+              <span className="font-medium text-sand-50">
+                Preferisci un percorso solo tuo?
+              </span>{" "}
+              Le lezioni individuali si costruiscono sulle tue esigenze, con
+              orari concordati insieme. Scrivimi e ne parliamo.
+            </p>
           </div>
 
-          {/* Pannello di contatto diretto, al posto del calendario */}
+          {/* Orari fissi + contatto diretto */}
           <div className="rounded-[2rem] border border-sage-600 bg-sand-50 p-8 text-ink shadow-2xl sm:p-10">
-            <p className="eyebrow">Scrivimi</p>
-            <p className="mt-4 font-serif text-3xl leading-snug text-sage-900">
-              Ti ricontatto io,
-              <span className="block italic text-sage-600">
-                di solito in giornata.
-              </span>
-            </p>
+            <p className="eyebrow">Gli orari della settimana</p>
 
-            <div className="mt-8 flex flex-col gap-3">
+            <ul className="mt-6 space-y-4">
+              {SCHEDULE.map((slot) => (
+                <li
+                  key={slot.id}
+                  className={`rounded-2xl border p-6 ${
+                    slot.primary
+                      ? "border-sage-300 bg-sage-50"
+                      : "border-sage-200 bg-sand-100/60"
+                  }`}
+                >
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="font-serif text-2xl text-sage-900">
+                      {slot.title}
+                    </h3>
+                    <span className="font-serif text-2xl text-clay-500">
+                      {slot.time}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-sage-700">
+                    {slot.days}
+                  </p>
+                  <p className="mt-1 text-xs text-sage-600">{slot.mode}</p>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 flex flex-col gap-3 border-t border-sage-200 pt-8">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -101,27 +124,8 @@ export default function Booking() {
                 </svg>
                 {EMAIL}
               </a>
-            </div>
 
-            <div className="mt-9 border-t border-sage-200 pt-7">
-              <p className="text-sm font-medium text-sage-900">
-                Se vuoi, raccontami già:
-              </p>
-              <ul className="mt-4 space-y-3">
-                {hints.map((hint) => (
-                  <li
-                    key={hint}
-                    className="flex gap-3 text-sm leading-relaxed text-sage-700"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-clay-400"
-                    />
-                    {hint}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-7 text-xs leading-relaxed text-sage-600">
+              <p className="mt-3 text-xs leading-relaxed text-sage-600">
                 Nessun impegno e nessuna iscrizione: la prima lezione di yoga su
                 Zoom è gratuita, e decidi dopo averla provata.
               </p>

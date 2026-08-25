@@ -49,7 +49,8 @@ yoga/
 │  ├─ page.jsx          # composizione delle sezioni
 │  └─ globals.css       # direttive Tailwind + classi .btn-primary / .eyebrow / .section
 ├─ lib/
-│  └─ contacts.js       # WhatsApp, email e messaggio precompilato (punto unico di verità)
+│  ├─ contacts.js       # WhatsApp, email e messaggio precompilato (punto unico di verità)
+│  └─ schedule.js       # orari fissi delle lezioni (punto unico di verità)
 ├─ components/
 │  ├─ Navbar.jsx        # header fisso, si compatta allo scroll (client component)
 │  ├─ Hero.jsx          # 1. Hero — titolo mente-corpo + CTA prima lezione gratuita
@@ -75,12 +76,12 @@ yoga/
 
 | # | Sezione | Ancora | Contenuto |
 |---|---------|--------|-----------|
-| 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, nota «lezioni dal vivo su Zoom», CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
+| 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, orario «lunedì e mercoledì alle 19», CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
 | 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica** |
 | 4 | Chi sono | `#chi-sono` | Profilo in prima persona: danza dal 1994, Accademia Nazionale di Danza, stile praticato, riga credenziali |
 | 5 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
-| 6 | Inizia Ora | `#inizia-ora` | Contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi). Nessun calendario: è Tiziana a ricontattare |
+| 6 | Inizia Ora | `#inizia-ora` | Orari fissi della settimana + contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi) e le lezioni individuali |
 
 ---
 
@@ -141,7 +142,25 @@ La prima voce dell'array occupa due colonne su desktop: mettici la testimonianza
 Per usare le foto al posto delle iniziali, sostituisci lo `<span>` dell'avatar con un
 `next/image` da 44×44 px e `className="rounded-full object-cover"`.
 
-### 3. Contatti (WhatsApp ed email)
+### 3. Orari delle lezioni
+
+Gli orari sono fissi e vivono in [`lib/schedule.js`](lib/schedule.js). Modifica lì: si aggiornano
+insieme la Hero, il pannello di *Inizia Ora* e la nota nel footer.
+
+```js
+export const SCHEDULE = [
+  { id: "yoga",       days: "Lunedì e mercoledì", time: "19:00", title: "Yoga",                mode: "Online, in diretta su Zoom", primary: true  },
+  { id: "posturale",  days: "Martedì e giovedì",  time: "19:00", title: "Ginnastica posturale", mode: "In presenza",                primary: false },
+];
+```
+
+`primary: true` colora il riquadro con lo sfondo salvia: serve a tenere lo yoga in primo piano
+rispetto alla posturale. `YOGA_SCHEDULE_SHORT` è la versione discorsiva usata nella Hero.
+
+**Manca la sede** delle lezioni in presenza: il footer rimanda a un messaggio. Quando la sai,
+aggiungila in `schedule.js` e mostrala nel riquadro della posturale.
+
+### 4. Contatti (WhatsApp ed email)
 
 Tutti i contatti vivono in un solo file: [`lib/contacts.js`](lib/contacts.js). Modifica lì e
 l'aggiornamento si propaga a navbar, sezione *Inizia Ora*, footer e pulsante fluttuante.
@@ -169,7 +188,7 @@ Dove compare WhatsApp:
 
 Per rimuovere il pulsante fluttuante, togli `<WhatsAppFloat />` da [`app/page.jsx`](app/page.jsx).
 
-### 4. Palette
+### 5. Palette
 
 Definita in [`tailwind.config.js`](tailwind.config.js):
 

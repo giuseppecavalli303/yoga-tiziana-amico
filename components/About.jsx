@@ -6,7 +6,7 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
  * sezione: in alto sarebbe una vanteria, qui è una verifica.
  */
 const credentials = [
-  "Diploma di I livello, Accademia Nazionale di Danza di Roma — 108/110",
+  "Laurea in danza contemporanea, Accademia Nazionale di Danza di Roma — 108/110",
   "RYT 250, Yoga Alliance Italia",
   "Istruttrice di Ginnastica Posturale, riconoscimento CSEN",
   "Insegnante di yoga dal 2015",
@@ -31,16 +31,17 @@ export default function About() {
           <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-sage-900 sm:text-5xl">
             Studio come si muove un corpo
             <span className="block italic text-sage-600">
-              da quando ne avevo sei.
+              da quando ne avevo tre.
             </span>
           </h2>
 
           <div className="mt-8 space-y-5 leading-relaxed text-sage-700">
             <p>
-              Ho iniziato con la danza classica a sei anni e non ho più smesso:
-              vent&apos;anni dopo mi sono diplomata all&apos;Accademia Nazionale
-              di Danza di Roma. Prima di insegnare ho danzato per anni, tra gli
-              altri con Enzo Cosimi e Giorgio Rossi.
+              Ho iniziato a danzare a tre anni: prima classica e moderna, poi
+              contemporanea, fino alla laurea in danza contemporanea
+              all&apos;Accademia Nazionale di Danza di Roma. Prima di insegnare
+              ho danzato per anni, tra gli altri con Enzo Cosimi e Giorgio
+              Rossi.
             </p>
             <p>
               Allo yoga sono arrivata portandomi dietro quell&apos;occhio lì:
@@ -48,15 +49,20 @@ export default function About() {
               movimento si blocca, cosa un corpo sta compensando senza saperlo.
             </p>
             <p>
-              Non insegno posizioni. Insegno a riconoscere il proprio corpo
-              dall&apos;interno e a muoverlo con la libertà che avevamo tutti da
-              bambini, prima che le scrivanie e le abitudini ce la togliessero.
-              È un lavoro lento, e per questo lo faccio con gruppi piccoli.
+              Il mio obiettivo è insegnarti ad avere consapevolezza del tuo
+              corpo: ad ascoltarlo e a muoverlo nel modo corretto{" "}
+              <strong className="font-medium text-sage-900">
+                anche fuori dal tappetino
+              </strong>
+              , con la libertà di movimento che avevamo tutti da bambini. È un
+              lavoro lento, e per questo lo faccio con gruppi piccoli.
             </p>
             <p>
-              Pratichiamo <strong className="font-medium text-sage-900">Hatha
-              Yoga</strong> con elementi di Ashtanga, Sivananda, Power Yoga e
-              Vinyasa Flow: la scelta cambia con il gruppo e con la giornata.
+              Insegno <strong className="font-medium text-sage-900">Hatha
+              Yoga</strong> — con elementi di Ashtanga, Sivananda, Power Yoga e
+              Vinyasa Flow — e ginnastica posturale. Se preferisci un percorso
+              costruito solo su di te, possiamo lavorare in lezioni individuali
+              su misura.
             </p>
           </div>
 
