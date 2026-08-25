@@ -98,7 +98,7 @@ export default function Method() {
           ))}
         </div>
 
-        {/* Rituale del dopo-lezione: cinque minuti in più, fuori dai sessanta */}
+        {/* Rituale del dopo-lezione, in ogni lezione online e in presenza */}
         <div className="mt-8 flex flex-col gap-6 rounded-3xl bg-sage-800 p-8 text-sand-100 sm:flex-row sm:items-center sm:gap-10 sm:p-10">
           <span
             aria-hidden="true"
@@ -108,23 +108,21 @@ export default function Method() {
           </span>
           <div>
             <h3 className="font-serif text-2xl leading-snug sm:text-3xl">
-              E dopo, cinque minuti solo nostri
+              Cinque minuti solo nostri
             </h3>
             <p className="mt-3 max-w-prose leading-relaxed text-sage-100/85">
-              Quando la lezione è finita restiamo insieme altri cinque minuti,
-              fuori dai sessanta: mi racconti come è andata, sciogliamo i dubbi
-              rimasti, guardiamo cosa ha funzionato e cosa no. Succede sempre,
-              dopo ogni lezione — online e in presenza.
+              Alla fine ci prendiamo cinque minuti: mi racconti come è andata,
+              sciogliamo i dubbi rimasti, guardiamo cosa ha funzionato e cosa
+              no. Succede sempre, dopo ogni lezione — online e in presenza.
             </p>
           </div>
         </div>
 
         <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-relaxed text-sage-600">
-          Ti serve pochissimo per iniziare: un tappetino, due metri di spazio
-          libero e un dispositivo appoggiato di lato, così che io possa vederti
-          per intero. Nessuna fretta di arrivare a una forma perfetta: la
-          sicurezza è la condizione che permette alla pratica di durare negli
-          anni.
+          Ti serve pochissimo per iniziare: lo spazio del tuo tappetino e un
+          dispositivo che ti riprenda e da cui vedermi. Nessuna fretta di
+          arrivare a una forma perfetta: la sicurezza è la condizione che
+          permette alla pratica di durare negli anni.
         </p>
       </div>
     </section>
