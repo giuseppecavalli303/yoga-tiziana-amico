@@ -55,8 +55,9 @@ yoga/
 │  ├─ Hero.jsx          # 1. Hero — titolo mente-corpo + CTA prima lezione gratuita
 │  ├─ Practice.jsx      # 2. La Pratica — respiro, flessibilità, equilibrio mentale
 │  ├─ Method.jsx        # 3. La Sicurezza (Il Metodo) — 3 blocchi
-│  ├─ Testimonials.jsx  # 4. Testimonianze degli allievi
-│  ├─ Booking.jsx       # 5. Inizia Ora — contatto diretto WhatsApp/email
+│  ├─ About.jsx         # 4. Chi sono — profilo, formazione, credenziali
+│  ├─ Testimonials.jsx  # 5. Testimonianze degli allievi
+│  ├─ Booking.jsx       # 6. Inizia Ora — contatto diretto WhatsApp/email
 │  ├─ Footer.jsx
 │  ├─ WhatsAppFloat.jsx # pulsante WhatsApp fluttuante
 │  ├─ icons/WhatsAppIcon.jsx
@@ -70,15 +71,16 @@ yoga/
 └─ jsconfig.json        # alias "@/..."
 ```
 
-### Le cinque sezioni
+### Le sei sezioni
 
 | # | Sezione | Ancora | Contenuto |
 |---|---------|--------|-----------|
 | 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, nota «lezioni dal vivo su Zoom», CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
 | 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica** |
-| 4 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
-| 5 | Inizia Ora | `#inizia-ora` | Contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi). Nessun calendario: è Tiziana a ricontattare |
+| 4 | Chi sono | `#chi-sono` | Profilo in prima persona: danza dal 1994, Accademia Nazionale di Danza, stile praticato, riga credenziali |
+| 5 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
+| 6 | Inizia Ora | `#inizia-ora` | Contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi). Nessun calendario: è Tiziana a ricontattare |
 
 ---
 
@@ -115,8 +117,10 @@ in [`components/Practice.jsx`](components/Practice.jsx) con lo stesso schema del
 nessun ritaglio: `h-auto w-full` lascia il rapporto nativo, così restano visibili sia lo schermo
 con la griglia Zoom sia chi pratica sul tappetino.
 
-**Segnaposto.** Il componente [`components/ImagePlaceholder.jsx`](components/ImagePlaceholder.jsx)
-non è più usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una foto.
+**Chi sono — ritratto mancante.** La sezione [`components/About.jsx`](components/About.jsx) usa
+ancora `ImagePlaceholder`: serve una **foto di Tiziana**, non di repertorio. Il riquadro è
+`aspect-[4/5]`, quindi va bene un ritratto verticale. Sostituiscilo con lo stesso schema delle
+altre due foto (import statico + `next/image`).
 
 ### 2. Testimonianze
 
@@ -190,3 +194,18 @@ Tipografia: **Cormorant Garamond** (titoli, serif elegante) + **Inter** (testo),
 - Accessibilità: `lang="it"`, gerarchia `h1 → h3` corretta, `focus-visible` su tutti i CTA,
   link solo-icona con `aria-label`, animazioni disattivate con `prefers-reduced-motion`.
 - Responsive: layout a colonna singola sotto `md`, griglie a 2/3 colonne da `md` in su.
+
+---
+
+## Nota sul tono
+
+La sezione *Chi sono* è scritta **in prima persona** e le credenziali sono elencate senza
+aggettivi: solo nomi propri, date e voti. È una scelta, non una svista — «insegnante di altissimo
+livello» si legge come vanteria anche quando è vero, mentre «Accademia Nazionale di Danza,
+108/110» lascia la conclusione a chi legge. Per lo stesso motivo la riga delle credenziali sta
+in fondo alla sezione e non nella Hero: in alto sarebbe un'esibizione, lì è una verifica per chi
+si è appena chiesto «ma chi me lo insegna?».
+
+Il gruppo a numero chiuso è l'argomento che regge il valore della lezione: otto persone invece di
+trenta significa che ogni allievo riceve attenzione reale, e questo ha un costo. La pagina lo dice
+descrivendo il metodo, mai difendendo il prezzo, e non nomina mai la concorrenza.

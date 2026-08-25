@@ -66,6 +66,9 @@ export default function Footer() {
             <a href="#il-metodo" className="transition hover:text-sage-900">
               Il Metodo
             </a>
+            <a href="#chi-sono" className="transition hover:text-sage-900">
+              Chi sono
+            </a>
             <a href="#testimonianze" className="transition hover:text-sage-900">
               Testimonianze
             </a>

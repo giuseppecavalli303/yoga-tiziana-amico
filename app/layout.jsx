@@ -22,6 +22,7 @@ export const metadata = {
     "yoga",
     "yoga online",
     "lezioni di yoga su Zoom",
+    "Hatha Yoga",
     "insegnante di yoga",
     "Tiziana Amico",
     "respiro",

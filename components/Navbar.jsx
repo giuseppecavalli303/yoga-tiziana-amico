@@ -7,8 +7,8 @@ import { PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contacts";
 const links = [
   { href: "#la-pratica", label: "La Pratica" },
   { href: "#il-metodo", label: "Il Metodo" },
+  { href: "#chi-sono", label: "Chi sono" },
   { href: "#testimonianze", label: "Testimonianze" },
-  { href: "#inizia-ora", label: "Inizia Ora" },
 ];
 
 export default function Navbar() {
