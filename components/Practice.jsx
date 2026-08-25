@@ -27,9 +27,9 @@ export default function Practice() {
           <div className="lg:sticky lg:top-32 lg:self-start">
             <p className="eyebrow">La Pratica</p>
             <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-sage-900 sm:text-5xl">
-              Una disciplina che continua
+              Un benessere che continua
               <span className="block italic text-sage-600">
-                quando arrotoli il tappetino.
+                anche al di fuori del tappetino.
               </span>
             </h2>
             <p className="mt-7 max-w-prose leading-relaxed text-sage-700">
