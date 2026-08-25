@@ -1,4 +1,5 @@
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
+import portrait from "@/public/ritratto-tiziana.jpeg";
 
 /**
  * Credenziali: solo fatti, date e nomi propri. Nessun aggettivo —
@@ -18,10 +19,17 @@ export default function About() {
     <section id="chi-sono" className="scroll-mt-24 bg-sage-50 py-24 sm:py-32">
       <div className="section grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
         <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
-          <ImagePlaceholder
-            label="Ritratto di Tiziana"
-            caption="Qui va una foto sua, non di repertorio"
-            className="aspect-[4/5] w-full rounded-[2rem] shadow-[0_30px_80px_-45px_rgba(46,54,48,0.5)]"
+          {/*
+            Ritratto reale in /public/ritratto-tiziana.jpeg (1536×2048, 3:4).
+            Contenitore 4/5: il taglio verticale è di circa il 3% per lato,
+            quindi il volto resta esattamente dov'è.
+          */}
+          <Image
+            src={portrait}
+            alt="Ritratto di Tiziana Amico"
+            placeholder="blur"
+            sizes="(max-width: 1023px) 100vw, 35vw"
+            className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-[0_30px_80px_-45px_rgba(46,54,48,0.5)] ring-1 ring-sage-200/70"
           />
         </div>
 

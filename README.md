@@ -65,7 +65,8 @@ yoga/
 │  └─ ImagePlaceholder.jsx  # segnaposto immagine riutilizzabile
 ├─ public/
 │  ├─ hero-yoga.jpg     # foto della sezione Hero (2:3 verticale)
-│  └─ la-pratica-yoga.jpg # foto della sezione La Pratica (lezione su Zoom)
+│  ├─ la-pratica-yoga.jpg # foto della sezione La Pratica (lezione su Zoom)
+│  └─ ritratto-tiziana.jpeg # ritratto per la sezione Chi sono
 ├─ tailwind.config.js   # palette, font, animazioni
 ├─ postcss.config.js
 ├─ next.config.mjs
@@ -118,10 +119,12 @@ in [`components/Practice.jsx`](components/Practice.jsx) con lo stesso schema del
 nessun ritaglio: `h-auto w-full` lascia il rapporto nativo, così restano visibili sia lo schermo
 con la griglia Zoom sia chi pratica sul tappetino.
 
-**Chi sono — ritratto mancante.** La sezione [`components/About.jsx`](components/About.jsx) usa
-ancora `ImagePlaceholder`: serve una **foto di Tiziana**, non di repertorio. Il riquadro è
-`aspect-[4/5]`, quindi va bene un ritratto verticale. Sostituiscilo con lo stesso schema delle
-altre due foto (import statico + `next/image`).
+**Chi sono — ritratto.** `public/ritratto-tiziana.jpeg` (1536×2048, 3:4) è collegata in
+[`components/About.jsx`](components/About.jsx). Il contenitore è `aspect-[4/5]`: taglia circa il
+3% sopra e sotto, quindi il volto resta dov'è. Per sostituirla basta un altro ritratto verticale.
+
+**Segnaposto.** [`components/ImagePlaceholder.jsx`](components/ImagePlaceholder.jsx) non è più
+usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una foto.
 
 ### 2. Testimonianze
 
