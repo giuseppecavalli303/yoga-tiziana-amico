@@ -69,31 +69,74 @@ export default function Booking() {
             <p className="eyebrow">Gli orari della settimana</p>
 
             <ul className="mt-6 space-y-4">
-              {SCHEDULE.map((slot) => (
+              {SCHEDULE.map((course) => (
                 <li
-                  key={slot.id}
+                  key={course.id}
                   className={`rounded-2xl border p-6 ${
-                    slot.primary
+                    course.primary
                       ? "border-sage-300 bg-sage-50"
                       : "border-sage-200 bg-sand-100/60"
                   }`}
                 >
-                  <div className="flex items-baseline justify-between gap-4">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <h3 className="font-serif text-2xl text-sage-900">
-                      {slot.title}
+                      {course.title}
                     </h3>
-                    <span className="font-serif text-2xl text-clay-500">
-                      {slot.time}
+                    <span className="text-xs font-medium uppercase tracking-widest text-sage-500">
+                      {course.format}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm font-medium text-sage-700">
-                    {slot.days}
-                  </p>
-                  <p className="mt-1 text-xs text-sage-600">{slot.mode}</p>
+
+                  <dl className="mt-4 space-y-1.5">
+                    {course.slots.map((slot) => (
+                      <div
+                        key={slot.days}
+                        className="flex items-baseline justify-between gap-4 border-b border-sage-200/70 pb-1.5 last:border-0 last:pb-0"
+                      >
+                        <dt className="text-sm text-sage-700">{slot.days}</dt>
+                        <dd className="font-serif text-xl text-clay-500">
+                          {slot.time}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  {course.venue ? (
+                    <a
+                      href={course.venue.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 flex gap-3 rounded-xl bg-sand-50 p-4 transition hover:bg-sand-200/60"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                        className="mt-0.5 h-5 w-5 shrink-0 text-sage-600"
+                      >
+                        <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                      </svg>
+                      <span>
+                        <span className="block text-sm font-medium text-sage-900">
+                          {course.venue.name}
+                        </span>
+                        <span className="block text-sm text-sage-700">
+                          {course.venue.address}
+                        </span>
+                        <span className="mt-1 block text-xs text-sage-600">
+                          {course.venue.note}
+                        </span>
+                      </span>
+                    </a>
+                  ) : null}
                 </li>
               ))}
             </ul>
-
             <div className="mt-8 flex flex-col gap-3 border-t border-sage-200 pt-8">
               <a
                 href={WHATSAPP_URL}

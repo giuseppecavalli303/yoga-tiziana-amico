@@ -78,7 +78,7 @@ yoga/
 |---|---------|--------|-----------|
 | 1 | Hero | `#top` | Foto verticale `hero-yoga.jpg`, titolo sulla riconnessione mente-corpo, orario «lunedì e mercoledì alle 19», CTA **«Inizia il tuo percorso — Prima Lezione Gratuita»** |
 | 2 | La Pratica | `#la-pratica` | Lo yoga come stile di vita: **01 Il respiro**, **02 La flessibilità**, **03 L'equilibrio mentale** |
-| 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica** |
+| 3 | Il Metodo | `#il-metodo` | **Classi a numero chiuso** (max 8 riquadri in una schermata) · **Correzione posturale in tempo reale** (via telecamera) · **Rispetto della biomeccanica**, più il blocco «Gli ultimi cinque minuti» sul confronto di fine lezione |
 | 4 | Chi sono | `#chi-sono` | Profilo in prima persona: danza dal 1994, Accademia Nazionale di Danza, stile praticato, riga credenziali |
 | 5 | Testimonianze | `#testimonianze` | Le voci degli allievi: cinque citazioni + invito alla prima lezione |
 | 6 | Inizia Ora | `#inizia-ora` | Orari fissi della settimana + contatto diretto (WhatsApp / email) + i tre passi (mi scrivi → ti rispondo → pratichi) e le lezioni individuali |
@@ -147,18 +147,35 @@ Per usare le foto al posto delle iniziali, sostituisci lo `<span>` dell'avatar c
 Gli orari sono fissi e vivono in [`lib/schedule.js`](lib/schedule.js). Modifica lì: si aggiornano
 insieme la Hero, il pannello di *Inizia Ora* e la nota nel footer.
 
+Ogni corso ha uno o più `slots`, così una stessa disciplina può comparire in formati diversi:
+
 ```js
-export const SCHEDULE = [
-  { id: "yoga",       days: "Lunedì e mercoledì", time: "19:00", title: "Yoga",                mode: "Online, in diretta su Zoom", primary: true  },
-  { id: "posturale",  days: "Martedì e giovedì",  time: "19:00", title: "Ginnastica posturale", mode: "In presenza",                primary: false },
-];
+{
+  id: "posturale-presenza",
+  title: "Ginnastica posturale",
+  format: "In presenza · 60 minuti",
+  slots: [
+    { days: "Martedì", time: "10:00" },
+    { days: "Giovedì", time: "11:00" },
+  ],
+  venue: VENUE,       // mostra il riquadro con indirizzo e link a Google Maps
+  primary: false,
+}
 ```
+
+Orari attuali:
+
+| Corso | Formato | Quando |
+|-------|---------|--------|
+| Yoga | Online su Zoom | Lunedì e mercoledì, 19:00 |
+| Ginnastica posturale | Online su Zoom | Martedì e giovedì, 19:00 |
+| Ginnastica posturale | In presenza, 60 minuti | Martedì 10:00 · Giovedì 11:00 |
 
 `primary: true` colora il riquadro con lo sfondo salvia: serve a tenere lo yoga in primo piano
 rispetto alla posturale. `YOGA_SCHEDULE_SHORT` è la versione discorsiva usata nella Hero.
 
-**Manca la sede** delle lezioni in presenza: il footer rimanda a un messaggio. Quando la sai,
-aggiungila in `schedule.js` e mostrala nel riquadro della posturale.
+La sede in presenza è in `VENUE`: REC — Realtà Coreutiche, Via Portuense 543, Roma. Il riquadro
+è cliccabile e apre la ricerca su Google Maps.
 
 ### 4. Contatti (WhatsApp ed email)
 

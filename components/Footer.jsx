@@ -1,5 +1,6 @@
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { EMAIL, MAILTO_URL, PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contacts";
+import { VENUE } from "@/lib/schedule";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -21,10 +22,11 @@ export default function Footer() {
                 la pagina resta dedicata allo yoga online. */}
             <p className="mt-5 max-w-md rounded-2xl border border-sage-200 bg-sand-100/70 p-5 text-sm leading-relaxed text-sage-700">
               <span className="font-medium text-sage-900">
-                Anche ginnastica posturale, in presenza.
+                Anche ginnastica posturale.
               </span>{" "}
-              Martedì e giovedì alle 19, in piccolo gruppo. Scrivimi per
-              conoscere la sede.
+              Online su Zoom il martedì e il giovedì alle 19. In presenza a Roma
+              presso {VENUE.name}, {VENUE.address}: martedì alle 10 e giovedì
+              alle 11, 60 minuti.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:gap-6">
