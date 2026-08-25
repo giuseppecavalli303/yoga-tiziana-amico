@@ -31,7 +31,7 @@ export default function About() {
           <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-sage-900 sm:text-5xl">
             Studio come si muove un corpo
             <span className="block italic text-sage-600">
-              da quando ne avevo tre.
+              da quando avevo tre anni.
             </span>
           </h2>
 
