@@ -17,19 +17,20 @@ const credentials = [
 export default function About() {
   return (
     <section id="chi-sono" className="scroll-mt-24 bg-sage-50 py-24 sm:py-32">
-      <div className="section grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+      <div className="section grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
         <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
           {/*
-            Ritratto reale in /public/ritratto-tiziana.jpeg (1536×2048, 3:4).
-            Contenitore 4/5: il taglio verticale è di circa il 3% per lato,
-            quindi il volto resta esattamente dov'è.
+            Ritratto reale in /public/ritratto-tiziana.jpeg (1080×724,
+            orizzontale). Contenitore quadrato: la figura è centrata, quindi il
+            taglio tocca solo i bordi del telo e il muro ai lati, e la colonna
+            resta alta abbastanza da reggere il confronto con il testo.
           */}
           <Image
             src={portrait}
-            alt="Ritratto di Tiziana Amico"
+            alt="Tiziana Amico seduta a gambe incrociate su un telo rotondo decorato, davanti a un muro in pietra"
             placeholder="blur"
             sizes="(max-width: 1023px) 100vw, 35vw"
-            className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-[0_30px_80px_-45px_rgba(46,54,48,0.5)] ring-1 ring-sage-200/70"
+            className="aspect-square w-full rounded-[2rem] object-cover shadow-[0_30px_80px_-45px_rgba(46,54,48,0.5)] ring-1 ring-sage-200/70"
           />
         </div>
 

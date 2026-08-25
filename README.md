@@ -119,9 +119,10 @@ in [`components/Practice.jsx`](components/Practice.jsx) con lo stesso schema del
 nessun ritaglio: `h-auto w-full` lascia il rapporto nativo, così restano visibili sia lo schermo
 con la griglia Zoom sia chi pratica sul tappetino.
 
-**Chi sono — ritratto.** `public/ritratto-tiziana.jpeg` (1536×2048, 3:4) è collegata in
-[`components/About.jsx`](components/About.jsx). Il contenitore è `aspect-[4/5]`: taglia circa il
-3% sopra e sotto, quindi il volto resta dov'è. Per sostituirla basta un altro ritratto verticale.
+**Chi sono — ritratto.** `public/ritratto-tiziana.jpeg` (1080×724, orizzontale) è collegata in
+[`components/About.jsx`](components/About.jsx). Il contenitore è `aspect-square`: la figura è
+centrata, quindi il taglio tocca solo i bordi laterali. Se sostituisci la foto con una verticale,
+cambia `aspect-square` in `aspect-[4/5]`.
 
 **Segnaposto.** [`components/ImagePlaceholder.jsx`](components/ImagePlaceholder.jsx) non è più
 usato da nessuna sezione: resta disponibile se aggiungi blocchi in attesa di una foto.
