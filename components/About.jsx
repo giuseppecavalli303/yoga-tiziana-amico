@@ -63,8 +63,8 @@ export default function About() {
               <strong className="font-medium text-sage-900">
                 anche fuori dal tappetino
               </strong>
-              , con la libertà di movimento che avevamo tutti da bambini. È un
-              lavoro lento, e per questo lo faccio con gruppi piccoli.
+              , fino a ritrovare la gioia nel muoversi. È un lavoro lento, e per
+              questo lo faccio con gruppi piccoli.
             </p>
             <p>
               Insegno <strong className="font-medium text-sage-900">Hatha
