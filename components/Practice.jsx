@@ -10,7 +10,7 @@ const pillars = [
   {
     number: "02",
     title: "La flessibilità",
-    body: "Non l'acrobazia, ma la libertà di movimento. Le asana aprono spazio dove il corpo si era abituato a chiudersi, restituendo leggerezza ai gesti quotidiani.",
+    body: "Non l'acrobazia, ma la libertà di movimento. Gli asana aprono spazio dove il corpo si era abituato a chiudersi, restituendo leggerezza ai gesti quotidiani.",
   },
   {
     number: "03",
